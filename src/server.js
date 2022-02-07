@@ -6,8 +6,6 @@ const knex = require("./db/connection");
 
 const listener = () => console.log(`Listening on Port ${PORT}!`);
 
-socket = io.listen(process.env.PORT);
-
 knex.migrate
   .latest()
   .then((migrations) => {
